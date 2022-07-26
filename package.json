@@ -4,7 +4,7 @@
   "description": "**18_olive-steel-retriever**",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "nodemon server.js"
   },
   "repository": {
@@ -20,6 +20,7 @@
   "homepage": "https://github.com/jaguilar95/olive-steel-retriever#readme",
   "dependencies": {
     "express": "^4.18.1",
+    "jest": "^28.1.3",
     "mongoose": "^6.4.7"
   }
 }
