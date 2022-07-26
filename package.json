@@ -1,0 +1,25 @@
+{
+  "name": "18_olive-steel-retriever",
+  "version": "1.0.0",
+  "description": "**18_olive-steel-retriever**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaguilar95/olive-steel-retriever.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaguilar95/olive-steel-retriever/issues"
+  },
+  "homepage": "https://github.com/jaguilar95/olive-steel-retriever#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.4.7"
+  }
+}
