@@ -59,6 +59,41 @@ const thoughtController = {
       })
       .catch((err) => res.json(err));
   },
+
+  // update a thought by id
+  updateThought({ params, body }, res) {
+    Thought.findOneAndUpdate({ _id: params.id }, body, {
+      new: true,
+      runValidators: true,
+    })
+      .then((dbThoughtData) => {
+        // if no thought data is found, send 404
+        if (!dbThoughtData) {
+          res.status(404).json({ message: "No thought found with this id!" });
+          return;
+        }
+
+        res.json(dbThoughtData);
+      })
+      .catch((err) => res.status(400).json(err));
+  },
+
+  // delete a thought by id
+  deleteThought({ params }, res) {
+    Thought.findOneAndDelete({ _id: params.id })
+      .then((dbThoughtData) => {
+        // if no thought data found, send 404
+        if (!dbThoughtData) {
+          res
+            .status(404)
+            .json({ message: "No thought data found with this id!" });
+          return;
+        }
+
+        res.json(dbThoughtData);
+      })
+      .catch((err) => res.status(400).json(err));
+  },
 };
 
 module.exports = thoughtController;
